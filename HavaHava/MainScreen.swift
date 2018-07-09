@@ -74,73 +74,18 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if screenHeight == 568{
             if indexPath.row == 0{
-                return 568
+                return screenHeight*0.7
             }
             else if indexPath.row == 1{
-                return 120
+                return screenHeight*0.3
             }
             else if indexPath.row == 2{
-                return 120
+                return screenHeight*0.3
             }
             else if indexPath.row == 3{
-                return 328
+                return screenHeight*0.6
             }
-        }
-        else if screenHeight == 667{
-            if indexPath.row == 0{
-                return 667
-            }
-            else if indexPath.row == 1{
-                return 140
-            }
-            else if indexPath.row == 2{
-                return 140
-            }
-            else if indexPath.row == 3{
-                return 387
-            }
-            else{
-                return 20
-            }
-        }
-        else if screenHeight == 736{
-            if indexPath.row == 0{
-                return 736
-            }
-            else if indexPath.row == 1{
-                return 154
-            }
-            else if indexPath.row == 2{
-                return 154
-            }
-            else if indexPath.row == 3{
-                return 428
-            }
-            else{
-                return 20
-            }
-        } else if screenHeight == 812{
-            if indexPath.row == 0{
-                return 812
-            }
-            else if indexPath.row == 1{
-                return 169
-            }
-            else if indexPath.row == 2{
-                return 169
-            }
-            else if indexPath.row == 3{
-                return 474
-            }
-            else{
-                return 20
-            }
-           
-        }
-        else{ return 10}
-        
         return 10
     }
     
