@@ -75,13 +75,13 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             if indexPath.row == 0{
-                return screenHeight*0.7
+                return screenHeight*0.85
             }
             else if indexPath.row == 1{
-                return screenHeight*0.3
+                return screenHeight*0.25
             }
             else if indexPath.row == 2{
-                return screenHeight*0.3
+                return screenHeight*0.25
             }
             else if indexPath.row == 3{
                 return screenHeight*0.6

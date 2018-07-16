@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC02890D20FAAA8800D3BF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC02890C20FAAA8800D3BF35 /* Assets.xcassets */; };
 		FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865B3D20CDD9A60003101E /* AppDelegate.swift */; };
 		FC865B4320CDD9A60003101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4120CDD9A60003101E /* Main.storyboard */; };
-		FC865B4520CDD9A80003101E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4420CDD9A80003101E /* Assets.xcassets */; };
 		FC865B4820CDD9A80003101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4620CDD9A80003101E /* LaunchScreen.storyboard */; };
 		FC949BB620CF348500085590 /* FirstWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BB520CF348500085590 /* FirstWeatherCell.swift */; };
 		FC949BB820CF351C00085590 /* SecondWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BB720CF351C00085590 /* SecondWeatherCell.swift */; };
@@ -19,10 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC02890C20FAAA8800D3BF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC865B3A20CDD9A60003101E /* HavaHava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavaHava.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC865B3D20CDD9A60003101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC865B4220CDD9A60003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FC865B4420CDD9A80003101E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC865B4720CDD9A80003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC865B4920CDD9A80003101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC949BB520CF348500085590 /* FirstWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWeatherCell.swift; sourceTree = "<group>"; };
@@ -43,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC02890920F8232100D3BF35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC865B3D20CDD9A60003101E /* AppDelegate.swift */,
+				FC949BB520CF348500085590 /* FirstWeatherCell.swift */,
+				FC949BB720CF351C00085590 /* SecondWeatherCell.swift */,
+				FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */,
+				FC949BBB20CF358800085590 /* FourthWeatherCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC02890A20F8233600D3BF35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC949BBF20CF487300085590 /* MainScreen.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC02890B20F8234100D3BF35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC865B4120CDD9A60003101E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FC865B3120CDD9A60003101E = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +90,11 @@
 		FC865B3C20CDD9A60003101E /* HavaHava */ = {
 			isa = PBXGroup;
 			children = (
-				FC865B3D20CDD9A60003101E /* AppDelegate.swift */,
-				FC949BB520CF348500085590 /* FirstWeatherCell.swift */,
-				FC949BB720CF351C00085590 /* SecondWeatherCell.swift */,
-				FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */,
-				FC949BBB20CF358800085590 /* FourthWeatherCell.swift */,
-				FC949BBF20CF487300085590 /* MainScreen.swift */,
-				FC865B4120CDD9A60003101E /* Main.storyboard */,
-				FC865B4420CDD9A80003101E /* Assets.xcassets */,
+				FC02890920F8232100D3BF35 /* Model */,
+				FC02890A20F8233600D3BF35 /* Controller */,
+				FC02890B20F8234100D3BF35 /* View */,
 				FC865B4620CDD9A80003101E /* LaunchScreen.storyboard */,
+				FC02890C20FAAA8800D3BF35 /* Assets.xcassets */,
 				FC865B4920CDD9A80003101E /* Info.plist */,
 			);
 			path = HavaHava;
@@ -135,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC865B4820CDD9A80003101E /* LaunchScreen.storyboard in Resources */,
-				FC865B4520CDD9A80003101E /* Assets.xcassets in Resources */,
+				FC02890D20FAAA8800D3BF35 /* Assets.xcassets in Resources */,
 				FC865B4320CDD9A60003101E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
