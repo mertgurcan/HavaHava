@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A8E8F258FCA0F549910B349 /* Pods_HavaHava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */; };
 		FC02890D20FAAA8800D3BF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC02890C20FAAA8800D3BF35 /* Assets.xcassets */; };
 		FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865B3D20CDD9A60003101E /* AppDelegate.swift */; };
 		FC865B4320CDD9A60003101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4120CDD9A60003101E /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		761CD0CE5CF24B2064685913 /* Pods-HavaHava.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HavaHava.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava.debug.xcconfig"; sourceTree = "<group>"; };
+		AF3E1DF73A8F0BA2A0D4ADC7 /* Pods-HavaHava.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HavaHava.release.xcconfig"; path = "Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava.release.xcconfig"; sourceTree = "<group>"; };
+		CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HavaHava.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC02890C20FAAA8800D3BF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC865B3A20CDD9A60003101E /* HavaHava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavaHava.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC865B3D20CDD9A60003101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8E8F258FCA0F549910B349 /* Pods_HavaHava.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		594883EA8F0B2EB1B03C2282 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				761CD0CE5CF24B2064685913 /* Pods-HavaHava.debug.xcconfig */,
+				AF3E1DF73A8F0BA2A0D4ADC7 /* Pods-HavaHava.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D610AA8C5B3081908BF86D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC02890920F8232100D3BF35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +98,8 @@
 			children = (
 				FC865B3C20CDD9A60003101E /* HavaHava */,
 				FC865B3B20CDD9A60003101E /* Products */,
+				594883EA8F0B2EB1B03C2282 /* Pods */,
+				D610AA8C5B3081908BF86D92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC865B4C20CDD9A80003101E /* Build configuration list for PBXNativeTarget "HavaHava" */;
 			buildPhases = (
+				D9B7AC6A1BFB23908E135EFD /* [CP] Check Pods Manifest.lock */,
 				FC865B3620CDD9A60003101E /* Sources */,
 				FC865B3720CDD9A60003101E /* Frameworks */,
 				FC865B3820CDD9A60003101E /* Resources */,
+				A2D2773BF9C703D70473A94B /* [CP] Embed Pods Frameworks */,
+				ACE4B003773DB2E3C181C138 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2D2773BF9C703D70473A94B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE4B003773DB2E3C181C138 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B7AC6A1BFB23908E135EFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HavaHava-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC865B3620CDD9A60003101E /* Sources */ = {
@@ -318,15 +401,13 @@
 		};
 		FC865B4D20CDD9A80003101E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 761CD0CE5CF24B2064685913 /* Pods-HavaHava.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SCF2XB98F;
 				INFOPLIST_FILE = HavaHava/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MertGurcan.HavaHava;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -336,15 +417,13 @@
 		};
 		FC865B4E20CDD9A80003101E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF3E1DF73A8F0BA2A0D4ADC7 /* Pods-HavaHava.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SCF2XB98F;
 				INFOPLIST_FILE = HavaHava/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MertGurcan.HavaHava;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

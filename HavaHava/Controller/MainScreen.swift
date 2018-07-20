@@ -7,21 +7,25 @@
 //
 
 import UIKit
+import CoreLocation
 
-class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+       
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.requestWhenInUseAuthorization()
         
-        
-        
-        print(screenHeight)
-        // Do any additional setup after loading the view.
     }
     
     
