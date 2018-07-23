@@ -53,24 +53,24 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            let firstWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FirstWeatherCell") as! FirstWeatherCell
-            return firstWeatherCell
+            let firstWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FirstWeatherCell")
+            return firstWeatherCell!
         }
         else if indexPath.row == 1{
-            let secondWeatherCell = tableView.dequeueReusableCell(withIdentifier: "SecondWeatherCell") as! SecondWeatherCell
-            return secondWeatherCell
+            let secondWeatherCell = tableView.dequeueReusableCell(withIdentifier: "SecondWeatherCell") 
+            return secondWeatherCell!
         }
         else if indexPath.row == 2{
-            let thirdWeatherCell = tableView.dequeueReusableCell(withIdentifier: "ThirdWeatherCell") as! ThirdWeatherCell
-            return thirdWeatherCell
+            let thirdWeatherCell = tableView.dequeueReusableCell(withIdentifier: "ThirdWeatherCell")
+            return thirdWeatherCell!
         }
         else if indexPath.row == 3 {
-            let fourthWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FourthWeatherCell") as! FourthWeatherCell
-            return fourthWeatherCell
+            let fourthWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FourthWeatherCell")
+            return fourthWeatherCell!
         }
         
-        let firstWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FirstWeatherCell") as! FirstWeatherCell
-        return firstWeatherCell
+        let firstWeatherCell = tableView.dequeueReusableCell(withIdentifier: "FirstWeatherCell")
+        return firstWeatherCell!
         
     }
     
@@ -134,4 +134,6 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
         
     }
+    
+    // MARK: - 
 }
