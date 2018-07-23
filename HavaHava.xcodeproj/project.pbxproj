@@ -13,10 +13,6 @@
 		FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865B3D20CDD9A60003101E /* AppDelegate.swift */; };
 		FC865B4320CDD9A60003101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4120CDD9A60003101E /* Main.storyboard */; };
 		FC865B4820CDD9A80003101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4620CDD9A80003101E /* LaunchScreen.storyboard */; };
-		FC949BB620CF348500085590 /* FirstWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BB520CF348500085590 /* FirstWeatherCell.swift */; };
-		FC949BB820CF351C00085590 /* SecondWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BB720CF351C00085590 /* SecondWeatherCell.swift */; };
-		FC949BBA20CF357A00085590 /* ThirdWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */; };
-		FC949BBC20CF358800085590 /* FourthWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BBB20CF358800085590 /* FourthWeatherCell.swift */; };
 		FC949BC020CF487300085590 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC949BBF20CF487300085590 /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +27,6 @@
 		FC865B4220CDD9A60003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC865B4720CDD9A80003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC865B4920CDD9A80003101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC949BB520CF348500085590 /* FirstWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWeatherCell.swift; sourceTree = "<group>"; };
-		FC949BB720CF351C00085590 /* SecondWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWeatherCell.swift; sourceTree = "<group>"; };
-		FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdWeatherCell.swift; sourceTree = "<group>"; };
-		FC949BBB20CF358800085590 /* FourthWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthWeatherCell.swift; sourceTree = "<group>"; };
 		FC949BBF20CF487300085590 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,10 +62,6 @@
 		FC02890920F8232100D3BF35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC949BB520CF348500085590 /* FirstWeatherCell.swift */,
-				FC949BB720CF351C00085590 /* SecondWeatherCell.swift */,
-				FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */,
-				FC949BBB20CF358800085590 /* FourthWeatherCell.swift */,
 				FC04DB012103DA4500D04E73 /* Connections.swift */,
 			);
 			path = Model;
@@ -257,12 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC949BB620CF348500085590 /* FirstWeatherCell.swift in Sources */,
 				FC949BC020CF487300085590 /* MainScreen.swift in Sources */,
 				FC04DB022103DA4500D04E73 /* Connections.swift in Sources */,
-				FC949BBC20CF358800085590 /* FourthWeatherCell.swift in Sources */,
-				FC949BBA20CF357A00085590 /* ThirdWeatherCell.swift in Sources */,
-				FC949BB820CF351C00085590 /* SecondWeatherCell.swift in Sources */,
 				FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
