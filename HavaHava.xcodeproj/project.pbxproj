@@ -10,6 +10,7 @@
 		4A8E8F258FCA0F549910B349 /* Pods_HavaHava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */; };
 		FC02890D20FAAA8800D3BF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC02890C20FAAA8800D3BF35 /* Assets.xcassets */; };
 		FC04DB022103DA4500D04E73 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04DB012103DA4500D04E73 /* Connections.swift */; };
+		FC0C7AD32105630100AFE87D /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C7AD22105630100AFE87D /* WeatherDataModel.swift */; };
 		FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865B3D20CDD9A60003101E /* AppDelegate.swift */; };
 		FC865B4320CDD9A60003101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4120CDD9A60003101E /* Main.storyboard */; };
 		FC865B4820CDD9A80003101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4620CDD9A80003101E /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HavaHava.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC02890C20FAAA8800D3BF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC04DB012103DA4500D04E73 /* Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
+		FC0C7AD22105630100AFE87D /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		FC865B3A20CDD9A60003101E /* HavaHava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavaHava.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC865B3D20CDD9A60003101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC865B4220CDD9A60003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				FC04DB012103DA4500D04E73 /* Connections.swift */,
+				FC0C7AD22105630100AFE87D /* WeatherDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0C7AD32105630100AFE87D /* WeatherDataModel.swift in Sources */,
 				FC949BC020CF487300085590 /* MainScreen.swift in Sources */,
 				FC04DB022103DA4500D04E73 /* Connections.swift in Sources */,
 				FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */,
