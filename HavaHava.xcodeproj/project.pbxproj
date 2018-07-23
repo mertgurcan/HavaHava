@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A8E8F258FCA0F549910B349 /* Pods_HavaHava.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */; };
 		FC02890D20FAAA8800D3BF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC02890C20FAAA8800D3BF35 /* Assets.xcassets */; };
+		FC04DB022103DA4500D04E73 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04DB012103DA4500D04E73 /* Connections.swift */; };
 		FC865B3E20CDD9A60003101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC865B3D20CDD9A60003101E /* AppDelegate.swift */; };
 		FC865B4320CDD9A60003101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4120CDD9A60003101E /* Main.storyboard */; };
 		FC865B4820CDD9A80003101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC865B4620CDD9A80003101E /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 		AF3E1DF73A8F0BA2A0D4ADC7 /* Pods-HavaHava.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HavaHava.release.xcconfig"; path = "Pods/Target Support Files/Pods-HavaHava/Pods-HavaHava.release.xcconfig"; sourceTree = "<group>"; };
 		CC965CDE8DAF3FE3A3E1BCC4 /* Pods_HavaHava.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HavaHava.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC02890C20FAAA8800D3BF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC04DB012103DA4500D04E73 /* Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
 		FC865B3A20CDD9A60003101E /* HavaHava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HavaHava.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC865B3D20CDD9A60003101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC865B4220CDD9A60003101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,11 +70,11 @@
 		FC02890920F8232100D3BF35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC865B3D20CDD9A60003101E /* AppDelegate.swift */,
 				FC949BB520CF348500085590 /* FirstWeatherCell.swift */,
 				FC949BB720CF351C00085590 /* SecondWeatherCell.swift */,
 				FC949BB920CF357A00085590 /* ThirdWeatherCell.swift */,
 				FC949BBB20CF358800085590 /* FourthWeatherCell.swift */,
+				FC04DB012103DA4500D04E73 /* Connections.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 		FC865B3C20CDD9A60003101E /* HavaHava */ = {
 			isa = PBXGroup;
 			children = (
+				FC865B3D20CDD9A60003101E /* AppDelegate.swift */,
 				FC02890920F8232100D3BF35 /* Model */,
 				FC02890A20F8233600D3BF35 /* Controller */,
 				FC02890B20F8234100D3BF35 /* View */,
@@ -256,6 +259,7 @@
 			files = (
 				FC949BB620CF348500085590 /* FirstWeatherCell.swift in Sources */,
 				FC949BC020CF487300085590 /* MainScreen.swift in Sources */,
+				FC04DB022103DA4500D04E73 /* Connections.swift in Sources */,
 				FC949BBC20CF358800085590 /* FourthWeatherCell.swift in Sources */,
 				FC949BBA20CF357A00085590 /* ThirdWeatherCell.swift in Sources */,
 				FC949BB820CF351C00085590 /* SecondWeatherCell.swift in Sources */,
@@ -407,7 +411,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SCF2XB98F;
 				INFOPLIST_FILE = HavaHava/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MertGurcan.HavaHava;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -423,7 +430,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SCF2XB98F;
 				INFOPLIST_FILE = HavaHava/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MertGurcan.HavaHava;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
