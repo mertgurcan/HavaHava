@@ -17,6 +17,7 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var tableView: UITableView!
     
     let locationManager = CLLocationManager()
+    let weatherDataModel = WeatherDataModel()
     
     
     override func viewDidLoad() {
@@ -103,7 +104,7 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
     }
     
-    // MARK: - Weather
+    // MARK: - Weather result
    
    
     func getWeather(lat: String, lon: String){
@@ -115,12 +116,13 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
             if response.result.isSuccess{
                 let weatherResult: JSON = JSON(response.result.value!)
                 
-                Alamofire.request(Connections.init().LOC_URL + "q=\(lat)+\(lon)&key=\(Connections.init().LOC_APP_ID)").responseJSON{
+                Alamofire.request(Connections.init().LOC_URL + "q=\(lat)+\(lon)&key=\(Connections.init().LOC_APP_ID)&language=tr").responseJSON{
                     response in
                     if response.result.isSuccess{
                         let locResult: JSON = JSON(response.result.value!)
-                        print(locResult)
-                        print(weatherResult)
+                        self.updateWeatherDataModel(weatherJson: weatherResult, locJson: locResult)
+                        
+                       
                     }
                     else{
                         print("Error \(String(describing: response.result.error)) occured")
@@ -135,5 +137,45 @@ class MainScreen: UIViewController , UITableViewDelegate, UITableViewDataSource,
         
     }
     
-    // MARK: - 
+    // MARK: - Model Updated
+    func updateWeatherDataModel(weatherJson : JSON, locJson: JSON){
+        weatherDataModel.city = locJson["results"][0]["components"]["city"].stringValue
+        weatherDataModel.temperature = Int(Double(Double((Int(weatherJson["currently"]["apparentTemperature"].double!) - 32))/1.8))
+        weatherDataModel.humidity = Int(weatherJson["currently"]["humidity"].double! * 100)
+        weatherDataModel.wind = Int(weatherJson["currently"]["windSpeed"].double! * 1.6)
+      
+        for num in 2...5{
+
+            let unixDate = weatherJson["hourly"]["data"][num]["time"].int!
+            let date = Date(timeIntervalSince1970: TimeInterval(unixDate))
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeZone = TimeZone(abbreviation: "GMT+3")
+            dateFormatter.locale = NSLocale.current
+            dateFormatter.dateFormat = "HH:mm"
+            let strDate = dateFormatter.string(from: date)
+
+            let icon = weatherJson["hourly"]["data"][num]["icon"].stringValue
+            weatherDataModel.hourly[num-2] = [strDate, icon]
+            
+        }
+        
+        for num in 2...6{
+            let weatherMax = weatherJson["daily"]["data"][num]["temperatureMax"].int!
+            let weatherMin = weatherJson["daily"]["data"][num]["temperatureMax"].int!
+            let weather = String(Int(((Double(weatherMax + weatherMin)/2) - 32 )/1.8))
+
+            let icon = weatherJson["daily"]["data"][num]["icon"].stringValue
+            weatherDataModel.daily[num-2] = [weather, icon]
+           
+        }
+    }
+    
+    
+    // MARK: - Update UI
+    
+    
+    func updateUI(){
+        
+    }
+    
 }

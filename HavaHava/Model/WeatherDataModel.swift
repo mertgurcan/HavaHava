@@ -13,10 +13,10 @@ class WeatherDataModel {
 
     var temperature : Int = 0
     var city : String = ""
-    var hourly : [String: String] = [:]
+    var hourly = [[String]](repeating: [], count: 4)
     var humidity : Int = 0
     var wind : Int = 0
-    var daily : [String: String] = [:] 
+    var daily = [[String]](repeating: [], count: 5)
     
 
 }
